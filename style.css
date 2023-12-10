@@ -66,13 +66,15 @@ html, body{
     display: flex;
     gap: 10px;
     flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 
 .bubble{
     width: 60px;
     height: 60px;
     background-color: lightgreen;
-    color: #fff;
+    color: black;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -83,4 +85,28 @@ html, body{
 .bubble:hover{
     background-color: darkgreen;
     cursor: pointer;
+}
+
+/* Media Queries for Tablet and Mobile Views */
+@media (max-width: 768px) {
+    #panel {
+        width: 90%;
+    }
+
+    #top {
+        padding: 0 10px;
+    }
+
+    .box {
+        font-size: 14px;
+    }
+
+    .element h2 {
+        font-size: 14px;
+    }
+    #bottom {
+        max-height: calc(100% - 100px); /* Maximum height, adjusted based on your layout */
+        overflow-y: auto; /* Enable vertical scrolling if content exceeds the maximum height */
+        padding: 10px;
+    }
 }
